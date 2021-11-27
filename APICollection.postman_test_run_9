@@ -1,0 +1,259 @@
+{
+	"id": "f16bd52c-cbf1-4c8f-824f-67f4a117a5a7",
+	"name": "APICollection",
+	"timestamp": "2021-11-27T06:00:30.026Z",
+	"collection_id": "11355708-ad4fd18a-b69f-4ba3-954a-2a1e950cbe8b",
+	"folder_id": 0,
+	"environment_id": "d0a35309-f73a-4161-9679-8b71c5f004b2",
+	"totalPass": 12,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "caf63d2b-4397-4410-8644-9497d372ea19",
+			"name": "Get All Todo Entries",
+			"url": "https://demo.fusio-project.org/index.php/todo",
+			"time": 551,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 1000ms": true,
+				"Status code name has string": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				551
+			],
+			"allTests": [
+				{
+					"Response time is less than 1000ms": true,
+					"Status code name has string": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f5df5bc1-1d69-4677-ab81-aba89c14bf4d",
+			"name": "Get All Entries",
+			"url": "https://demo.fusio-project.org/index.php",
+			"time": 199,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that Status code is 200": true,
+				"Verify that Status code name has string": true,
+				"Status code is 200": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Verify that Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				199
+			],
+			"allTests": [
+				{
+					"Verify that Status code is 200": true,
+					"Verify that Status code name has string": true,
+					"Status code is 200": true,
+					"Content-Type is present": true
+				}
+			]
+		},
+		{
+			"id": "4a842271-31a0-4b1d-a104-41000abc831e",
+			"name": "Get entry per ID - Valid ID",
+			"url": "https://demo.fusio-project.org/index.php/todo/?todo_id=2",
+			"time": 215,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				215
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "494b1373-63e9-47cc-a523-b97393c7452e",
+			"name": "Get entry per ID - Invalid ID(params not using TODO ID)",
+			"url": "https://demo.fusio-project.org/index.php/todo/?todo_id=2",
+			"time": 233,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				233
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "d9999007-7f33-4769-b99e-ac649bc835a7",
+			"name": "Get Books - valid book",
+			"url": "https://simple-books-api.glitch.me/books?type=fiction",
+			"time": 364,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The id number of a fiction book that available with the name The Midnight Library is ": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The id number of a fiction book that available with the name The Midnight Library is ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				364
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The id number of a fiction book that available with the name The Midnight Library is ": true
+				}
+			]
+		},
+		{
+			"id": "7ac9044a-9873-4ef5-877e-006ae2a6000e",
+			"name": "Get Books - invalid book type",
+			"url": "https://simple-books-api.glitch.me/books?type=romance",
+			"time": 238,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				238
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "222a6a15-9bfa-4281-84ec-22391c26feca",
+			"name": "Place a book order - using valid book ID",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 243,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				243
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2043,
+	"collection": {
+		"requests": [
+			{
+				"id": "caf63d2b-4397-4410-8644-9497d372ea19",
+				"method": "GET"
+			},
+			{
+				"id": "f5df5bc1-1d69-4677-ab81-aba89c14bf4d",
+				"method": "GET"
+			},
+			{
+				"id": "4a842271-31a0-4b1d-a104-41000abc831e",
+				"method": "GET"
+			},
+			{
+				"id": "494b1373-63e9-47cc-a523-b97393c7452e",
+				"method": "GET"
+			},
+			{
+				"id": "d9999007-7f33-4769-b99e-ac649bc835a7",
+				"method": "GET"
+			},
+			{
+				"id": "7ac9044a-9873-4ef5-877e-006ae2a6000e",
+				"method": "GET"
+			},
+			{
+				"id": "222a6a15-9bfa-4281-84ec-22391c26feca",
+				"method": "POST"
+			}
+		]
+	}
+}
